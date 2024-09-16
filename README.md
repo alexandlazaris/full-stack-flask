@@ -35,7 +35,9 @@ A basic full-stack app using Python, apiflask and good ol' html.
 ## API docs
 
 ![img](./assets/img-docs.png)
-**limitation**: not all routes contain same amount of information.
+
+> [!WARNING]
+> not all routes contain same amount of information.
 
 1. `flask run`
 2. head to `http://127.0.0.1:5000/docs` for locally hosted OpenAPI spec (auto generated)
