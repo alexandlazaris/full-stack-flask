@@ -6,6 +6,12 @@ __pycache__/
 # C extensions
 *.so
 
+# database
+*.db
+
+# API spec
+openapi.json
+
 # Distribution / packaging
 .Python
 build/
@@ -49,6 +55,8 @@ coverage.xml
 *.py,cover
 .hypothesis/
 .pytest_cache/
+./*/.pytest_cache/
+./tests/*.html
 cover/
 
 # Translations
