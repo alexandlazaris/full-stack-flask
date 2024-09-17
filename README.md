@@ -26,26 +26,29 @@ A basic full-stack app using Python, apiflask and good ol' html.
 
 ## Run
 
-1. `flask run`
+1. `python src/app.py`
 2. head to `http://127.0.0.1:5000` for app (root `/` is the web app)
 
 > [!TIP]
-> Change local host above to any address of your choice
+> Change local host above to any address of your choice by editing `src/app.py`
 
 ## API docs
+
+1. `python src/app.py`
+2. head to `http://127.0.0.1:5000/docs` for locally hosted OpenAPI spec (auto generated)
+3. run `flask spec` to generate an OpenAPI 3.0 spec, which can be used to host elsewhere
 
 ![img](./assets/img-docs.png)
 
 > [!WARNING]
-> not all routes contain same amount of information.
+> not all routes contain the same level of information as apiflask was being explored
 
-1. `flask run`
-2. head to `http://127.0.0.1:5000/docs` for locally hosted OpenAPI spec (auto generated)
-3. run `flask spec` to generate an OpenAPI 3.0 spec, which can be used to host elsewhere
+
 
 ## Tests
 
-1. `pytest tests/tests.py --html=./report.html`
+1. in 1 process, start the server `python src/app.py`
+2. in a 2nd process, run the tests `pytest tests/tests.py --html=./report.html`
 
 ![tests](./assets/img-tests.png)
 
