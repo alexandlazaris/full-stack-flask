@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book List</title>
+    <head><link rel="shortcut icon" href="#"></head>
+    <script>
+        function deleteBook(id) {
+            fetch(`/book/${id}`, {
+            method: 'DELETE'
+            })
+            .then(response => {
+            if (response.ok) {
+                window.location.reload();
+            } else {
+                alert('Failed to delete the book');
+            }
+            });
+        }
+        function deleteAll() {
+            fetch(`/books`, {
+            method: 'DELETE'
+            })
+            .then(response => {
+            if (response.ok) {
+                alert('All books have been deleted. Continue to add more books.');
+                window.location.reload();
+            } else {
+                alert('Failed to delete all books');
+            }
+            });
+        }
+        function createBook() {
+            const title = document.querySelector('input[name="title"]').value;
+            const author = document.querySelector('input[name="author"]').value;
+            if (!title || !author) {
+                alert("Error. Please provide a title AND author before submitting.");
+            }
+            else {
+                const book = {
+                title: title,
+                author: author
+                };
+
+                fetch('/book', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(book)
+                })
+                .then(response => {
+                if (response.ok) {
+                    window.location.reload();
+                } else {
+                    alert('Failed to create the book');
+                }
+                })
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>Books API</h1>
+    <p>Add a book to your collection by providing a title and an author.</p>
+    <form onsubmit="return false;">
+        <input type="text" name="title" placeholder="Book Title" required>
+        <input type="text" name="author" placeholder="Author" required>
+        <button type="submit" onclick="createBook()">Add</button>
+        <button type="submit" onclick="deleteAll()">Delete all?</button>
+    </form>
+    <ol>
+        {% for book in books %}
+        <li>'{{ book.title }}' by '{{ book.author }}' - <a href="javascript:void(0);" onclick="deleteBook('{{ book.id }}')">delete?</a></li>
+        {% endfor %}
+    </ol>
+</body>
+</html>
