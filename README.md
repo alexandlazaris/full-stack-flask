@@ -52,9 +52,10 @@ A basic full-stack app using Python, apiflask and good ol' html.
 
 - run behind reverse proxy (https://apiflask.com/tips/)
 - add configs to run different environments (dev, prod)
-- add UI form to update books
+- add UI form to update books & wrap up PUT /book/{id} endpoint
 - utilise db migrations
 - introduce a Bookshelf table which contains Books (1 to many)
+- dockerize the app
 
 ## References
 - https://github.com/apiflask/apiflask
