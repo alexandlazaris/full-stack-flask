@@ -54,3 +54,8 @@ A basic full-stack app using Python, apiflask and good ol' html.
 ## Future additions
 
 - https://apiflask.com/tips/ - run behind reverse proxy
+
+## References
+- https://github.com/apiflask/apiflask
+- https://medium.com/@nileshshindeofficial/in-this-blog-well-explore-how-to-use-flask-with-sqlite-a-lightweight-and-easy-to-use-database-c302cd939a0f
+- https://www.sqlitetutorial.net/sqlite-python/
