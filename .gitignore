@@ -57,7 +57,7 @@ coverage.xml
 .pytest_cache/
 ./*/.pytest_cache/
 ./tests/*.html
-*.html
+report.html
 cover/
 
 # Translations
