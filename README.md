@@ -1,11 +1,5 @@
 # python flask API
 
-- [Stack](#stack)
-- [Run](#run)
-- [API docs](#api-docs)
-- [Tests](#tests)
-  - [TODO](#todo)
-
 A basic full-stack app using Python, apiflask and good ol' html.
 
 ## Stack
@@ -56,9 +50,14 @@ A basic full-stack app using Python, apiflask and good ol' html.
 
 ## Future additions
 
-- https://apiflask.com/tips/ - run behind reverse proxy
+- run behind reverse proxy (https://apiflask.com/tips/)
+- add configs to run different environments (dev, prod)
+- add UI form to update books
+- utilise db migrations
+- introduce a Bookshelf table which contains Books (1 to many)
 
 ## References
 - https://github.com/apiflask/apiflask
 - https://medium.com/@nileshshindeofficial/in-this-blog-well-explore-how-to-use-flask-with-sqlite-a-lightweight-and-easy-to-use-database-c302cd939a0f
 - https://www.sqlitetutorial.net/sqlite-python/
+https://auth0.com/blog/developing-restful-apis-with-python-and-flask/
